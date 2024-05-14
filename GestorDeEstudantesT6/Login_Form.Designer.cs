@@ -1,6 +1,6 @@
 ﻿namespace GestorDeEstudantesT6
 {
-    partial class Form1
+    partial class Login_Form
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBoxUsuario = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form));
             this.textBoxUsuario = new System.Windows.Forms.TextBox();
             this.textBoxSenha = new System.Windows.Forms.TextBox();
             this.buttonLogin = new System.Windows.Forms.Button();
@@ -36,16 +36,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBoxUsuario = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBoxUsuario
-            // 
-            this.pictureBoxUsuario.Location = new System.Drawing.Point(96, 70);
-            this.pictureBoxUsuario.Name = "pictureBoxUsuario";
-            this.pictureBoxUsuario.Size = new System.Drawing.Size(117, 117);
-            this.pictureBoxUsuario.TabIndex = 0;
-            this.pictureBoxUsuario.TabStop = false;
             // 
             // textBoxUsuario
             // 
@@ -60,6 +53,7 @@
             this.textBoxSenha.Name = "textBoxSenha";
             this.textBoxSenha.Size = new System.Drawing.Size(100, 20);
             this.textBoxSenha.TabIndex = 2;
+            this.textBoxSenha.UseSystemPasswordChar = true;
             // 
             // buttonLogin
             // 
@@ -69,6 +63,7 @@
             this.buttonLogin.TabIndex = 3;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click_1);
             // 
             // buttonCancelar
             // 
@@ -106,7 +101,17 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Senha";
             // 
-            // Form1
+            // pictureBoxUsuario
+            // 
+            this.pictureBoxUsuario.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsuario.Image")));
+            this.pictureBoxUsuario.Location = new System.Drawing.Point(96, 70);
+            this.pictureBoxUsuario.Name = "pictureBoxUsuario";
+            this.pictureBoxUsuario.Size = new System.Drawing.Size(117, 117);
+            this.pictureBoxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxUsuario.TabIndex = 0;
+            this.pictureBoxUsuario.TabStop = false;
+            // 
+            // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,8 +124,10 @@
             this.Controls.Add(this.textBoxSenha);
             this.Controls.Add(this.textBoxUsuario);
             this.Controls.Add(this.pictureBoxUsuario);
-            this.Name = "Form1";
+            this.Name = "Login_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SGA - Acessar";
+            this.Load += new System.EventHandler(this.Login_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
